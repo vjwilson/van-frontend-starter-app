@@ -1,0 +1,15 @@
+language: node_js
+sudo: required
+notifications:
+  email: false
+node_js:
+- '10'
+install:
+- npm ci
+script:
+- .travis/deploy.sh
+env:
+  global:
+  - REPO="git@github.com:RedHatInsights/insights-dashboard-build"
+  - REPO_DIR="insights-dashboard-build"
+  - BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
