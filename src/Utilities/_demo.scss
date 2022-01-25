@@ -1,0 +1,32 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+        border-bottom: 1px solid #eaeaea;
+        th { padding: 8px; }
+    }
+    tbody {
+        td { padding: 8px; }
+        tr:nth-of-type(even) { background: #f7f7f7; }
+    }
+}
+
+section.splitcards {
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    .pf-c-card + .pf-c-card  { margin-left: 30px; }
+}
+
+.fas.fa-info-circle {
+    display: flex;
+    align-items: center;
+    &:before { font-size: 20px; }
+}
+
+.pull-right {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.ins-l-content *{ font-size: 15px; }
